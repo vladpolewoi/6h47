@@ -1,27 +1,27 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import App from "@/App";
-import Chat from "@/views/Chat";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Chat from '@/views/Chat'
+import Home from '@/views/Home'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "home",
-    component: App
+    path: '/',
+    name: 'home',
+    component: Home,
   },
   {
-    path: "/chat",
-    name: "chat",
-    component: Chat
-  }
-];
+    path: '/chat',
+    name: 'chat',
+    component: Chat,
+  },
+]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
-  routes
-});
+  routes,
+})
 
-export default router;
+export default router
