@@ -40,9 +40,6 @@
       "plugin:vue/essential",
       "@vue/prettier"
     ],
-    "rules": {
-      "singleQuotes": true
-    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
