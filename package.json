@@ -42,11 +42,6 @@
     ],
     "parserOptions": {
       "parser": "babel-eslint"
-    },
-    "rules": {
-      "semi": 0,
-      "singleQuotes": true,
-      "no-console": 0
     }
   },
   "postcss": {
