@@ -1,10 +1,22 @@
 <template lang="pug">
 div.chat
   div.container.chat__container
-    |Hello
+    div.chat__content
+      text-message(message="Hello")
+      text-message(position="right")
     div.chat__footer
-      input.input.chat__input(type="text" placeholder="Write message")
+      message-input
 </template>
+
+<script>
+import MessageInput from '@/components/MessageInput'
+import TextMessage from '@/components/TextMessage'
+
+export default {
+  name: 'ChatView',
+  components: { MessageInput, TextMessage },
+}
+</script>
 
 <style lang="scss" scoped>
 .chat {
@@ -18,21 +30,12 @@ div.chat
     flex-direction: column;
     justify-content: space-between;
   }
+  &__content {
+    padding: 3% 3% 0;
+  }
   &__footer {
     width: 100%;
     background-color: $dark2;
-  }
-  &__input {
-    background-color: transparent;
-    border: none;
-    color: $white;
-    &:focus {
-      border: 1px solid $purple;
-      box-shadow: none;
-    }
-    &::placeholder {
-      color: $white2;
-    }
   }
 }
 </style>
